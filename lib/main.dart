@@ -11,6 +11,7 @@ class CheckoutPayment extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
+      theme: ThemeData(textTheme: const TextTheme()),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Material App Bar'),
