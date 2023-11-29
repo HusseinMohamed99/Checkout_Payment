@@ -14,10 +14,10 @@ class CheckoutPayment extends StatelessWidget {
       theme: ThemeData(textTheme: const TextTheme()),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: const Text('Material  App Bar'),
         ),
         body: const Center(
-          child: Text('Hello World'),
+          child: Text('Hello  World'),
         ),
       ),
     );
