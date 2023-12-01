@@ -1,21 +1,19 @@
+import 'package:checkout_payment/Core/routing/app_router.dart';
+import 'package:checkout_payment/Core/routing/routes.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPaymentApp extends StatelessWidget {
-  const CheckoutPaymentApp({super.key});
+  const CheckoutPaymentApp({super.key, required this.appRouter});
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
+      title: 'Payment App',
       theme: ThemeData(textTheme: const TextTheme()),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material  App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello  World'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: Routes.cartScreen,
+      onGenerateRoute: appRouter.generateRoute,
     );
   }
 }
