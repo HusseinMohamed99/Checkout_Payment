@@ -10,7 +10,9 @@ class CheckoutPaymentApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Payment App',
-      theme: ThemeData(textTheme: const TextTheme()),
+      theme: ThemeData(
+        textTheme: const TextTheme(),
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.cartScreen,
       onGenerateRoute: appRouter.generateRoute,
