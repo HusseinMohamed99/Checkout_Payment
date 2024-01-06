@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Center(
           child: isLoading
-              ? const CircularProgressIndicator()
+              ? const CircularProgressIndicator.adaptive()
               : Text(
                   text,
                   textAlign: TextAlign.center,

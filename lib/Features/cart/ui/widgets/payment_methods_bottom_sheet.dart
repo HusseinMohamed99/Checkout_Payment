@@ -1,6 +1,4 @@
-import 'package:checkout_payment/Core/helpers/extensions.dart';
-import 'package:checkout_payment/Core/routing/routes.dart';
-import 'package:checkout_payment/Core/widgets/custom_button.dart';
+import 'package:checkout_payment/Features/cart/ui/widgets/custom_button_bloc_consumer.dart';
 import 'package:checkout_payment/Features/cart/ui/widgets/payment_methods_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -27,24 +25,19 @@ class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
+    return const Padding(
+      padding: EdgeInsets.all(16),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(
+          SizedBox(
             height: 16,
           ),
-          const PaymentMethodsListView(),
-          const SizedBox(
+          PaymentMethodsListView(),
+          SizedBox(
             height: 32,
           ),
-          CustomButton(
-            text: 'Continue',
-            onTap: () {
-              context.pushNamed(Routes.paymentDetailsView);
-            },
-          ),
+          CustomButtonBlocConsumer(),
         ],
       ),
     );
