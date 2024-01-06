@@ -20,6 +20,7 @@ class CheckoutPaymentApp extends StatelessWidget {
   }
 }
 //TODO: CREATE STRIPE PAYMENT
-// 1.  Create a Payment Intent (amount , currency). return {Payment Intent Object}
-// 2. init Payment Sheet (paymentIntentClientSecret).
-// 3. Present Payment Sheet().
+// 1.  Create a Payment Intent (amount , currency , customerId , ). return {Payment Intent Object}
+// 2.  Create Ephemeral Key (Stripe Version , customerId) return {Key Secret}
+// 3. init Payment Sheet (1. merchantDisplayName , 2. paymentIntentClientSecret , 3. customerEphemeralKeySecret).
+// 4. Present Payment Sheet().
